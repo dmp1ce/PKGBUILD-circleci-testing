@@ -2,28 +2,28 @@
 defaults: &defaults
   docker:
     - image: dmp1ce/archlinux-yay
-
-updatepackage: &update
-  name: Update packages
-  command: sudo pacman -Syu --noconfirm
-
-gitupdate: &buildpkgbuild
-  name: Build package
-  command: yay -S --noconfirm ${CIRCLE_JOB}
+  steps:
+    - run:
+        name: Update packages
+        command: sudo pacman -Syu --noconfirm
+    - run:
+        name: Build package
+        command: yay -S --noconfirm ${CIRCLE_JOB}
 
 # Main
 version: 2
 jobs:
+  bisq:
+    <<: *defaults
   bisq-bin:
     <<: *defaults
-    steps:
-      - run:
-          <<: *update
-      - run:
-          <<: *buildpkgbuild
+  bisq-git:
+    <<: *defaults
 
 workflows:
   version: 2
   build:
     jobs:
+      - bisq
       - bisq-bin
+      - bisq-git
