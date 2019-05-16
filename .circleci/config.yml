@@ -19,6 +19,20 @@ jobs:
     <<: *defaults
   bisq-git:
     <<: *defaults
+  lnd:
+    <<: *defaults
+  zap-desktop-bin:
+    <<: *defaults
+  pybitmessage-git:
+    <<: *defaults
+  lando:
+    <<: *defaults
+  lando-git:
+    <<: *defaults
+  diffutils-git:
+    <<: *defaults
+  check_smartmon-git:
+    <<: *defaults
 
 workflows:
   version: 2
@@ -27,3 +41,10 @@ workflows:
       - bisq
       - bisq-bin
       - bisq-git
+      - lnd
+      - zap-desktop-bin
+      - pybitmessage-git
+      - lando
+      - lando-git
+      - diffutils-git
+      - check_smartmon-git
