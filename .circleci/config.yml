@@ -45,9 +45,9 @@ jobs:
     <<: *defaults
   coinbin-git:
     <<: *defaults
-  check_zfs:
+  check_zfs-git:
     <<: *defaults
-  check_pacman:
+  check_pacman-git:
     <<: *defaults
   bitcoin-gold-git:
     <<: *defaults
@@ -60,11 +60,11 @@ workflows:
   version: 2
   build:
     jobs:
-      - bip39tool
+      - bip39tool-git
       - bitaddress-git
       - bitcoin-gold-git
-      - check_pacman
-      - check_zfs
+      - check_pacman-git
+      - check_zfs-git
       - bisq
       - bisq-bin
       - bisq-git
