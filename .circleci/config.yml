@@ -8,7 +8,7 @@ defaults: &defaults
         command: sudo pacman -Syu --noconfirm
     - run:
         name: Build package
-        command: yay -S --noconfirm ${CIRCLE_JOB}
+        command: yay --useask -S --noconfirm ${CIRCLE_JOB}
 
 # Main
 version: 2
