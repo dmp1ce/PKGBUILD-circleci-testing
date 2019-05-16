@@ -33,11 +33,38 @@ jobs:
     <<: *defaults
   check_smartmon-git:
     <<: *defaults
+  python2-simple-crypt:
+    <<: *defaults
+  mo-git:
+    <<: *defaults
+  list-all-systemd-timers-git:
+    <<: *defaults
+  diffutils-patched-exclude-directory-git:
+    <<: *defaults
+  decompose-git:
+    <<: *defaults
+  coinbin-git:
+    <<: *defaults
+  check_zfs:
+    <<: *defaults
+  check_pacman:
+    <<: *defaults
+  bitcoin-gold-git:
+    <<: *defaults
+  bitaddress-git:
+    <<: *defaults
+  bip39tool-git:
+    <<: *defaults
 
 workflows:
   version: 2
   build:
     jobs:
+      - bip39tool
+      - bitaddress-git
+      - bitcoin-gold-git
+      - check_pacman
+      - check_zfs
       - bisq
       - bisq-bin
       - bisq-git
@@ -48,3 +75,9 @@ workflows:
       - lando-git
       - diffutils-git
       - check_smartmon-git
+      - python2-simple-crypt
+      - mo-git
+      - list-all-systemd-timers-git
+      - diffutils-patched-exclude-directory-git
+      - decompose-git
+      - coinbin-git
