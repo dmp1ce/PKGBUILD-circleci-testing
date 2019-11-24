@@ -13,6 +13,8 @@ defaults: &defaults
 # Main
 version: 2
 jobs:
+  whirlpool-gui-appimage:
+    <<: *defaults
   bisq:
     <<: *defaults
   bisq-bin:
@@ -21,7 +23,7 @@ jobs:
     <<: *defaults
   lnd:
     <<: *defaults
-  zap-desktop-bin:
+  zap-desktop-appimage:
     <<: *defaults
   pybitmessage-git:
     <<: *defaults
@@ -58,6 +60,7 @@ workflows:
   version: 2
   build:
     jobs:
+      - whirlpool-gui-appimage
       - bip39tool-git
       - bitaddress-git
       - check_pacman-git
@@ -66,7 +69,7 @@ workflows:
       - bisq-bin
       - bisq-git
       - lnd
-      - zap-desktop-bin
+      - zap-desktop-appimage
       - pybitmessage-git
       - lando
       - lando-git
