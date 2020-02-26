@@ -13,6 +13,10 @@ defaults: &defaults
 # Main
 version: 2
 jobs:
+  mwc-qt-wallet-bin:
+    <<: *defaults
+  losslesscut:
+    <<: *defaults
   whirlpool-gui-appimage:
     <<: *defaults
   bisq:
@@ -24,6 +28,8 @@ jobs:
   lnd:
     <<: *defaults
   zap-desktop-appimage:
+    <<: *defaults
+  zap-desktop-git:
     <<: *defaults
   pybitmessage-git:
     <<: *defaults
@@ -56,6 +62,8 @@ workflows:
   version: 2
   build:
     jobs:
+      - mwc-qt-wallet-bin
+      - losslesscut
       - whirlpool-gui-appimage
       - bip39tool-git
       - bitaddress-git
@@ -66,14 +74,13 @@ workflows:
       - bisq-git
       - lnd
       - zap-desktop-appimage
+      - zap-desktop-git
       - pybitmessage-git
       - lando
       - lando-git
-      - diffutils-git
       - check_smartmon-git
       - python2-simple-crypt
       - mo-git
       - list-all-systemd-timers-git
-      - diffutils-patched-exclude-directory-git
       - decompose-git
       - coinbin-git
