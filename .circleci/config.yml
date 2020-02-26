@@ -31,8 +31,6 @@ jobs:
     <<: *defaults
   lando-git:
     <<: *defaults
-  diffutils-git:
-    <<: *defaults
   check_smartmon-git:
     <<: *defaults
   python2-simple-crypt:
@@ -40,8 +38,6 @@ jobs:
   mo-git:
     <<: *defaults
   list-all-systemd-timers-git:
-    <<: *defaults
-  diffutils-patched-exclude-directory-git:
     <<: *defaults
   decompose-git:
     <<: *defaults
