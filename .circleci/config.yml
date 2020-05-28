@@ -15,6 +15,16 @@ version: 2
 jobs:
   joinmarket-qt-git:
     <<: *defaults
+  python-jmdaemon-git:
+    <<: *defaults
+  python-jmclient-git:
+    <<: *defaults
+  python-jmbitcoin-git:
+    <<: *defaults
+  python-jmbase-git:
+    <<: *defaults
+  python-chromalog:
+    <<: *defaults
   mwc-qt-wallet-bin:
     <<: *defaults
   losslesscut:
@@ -65,6 +75,11 @@ workflows:
   build:
     jobs:
       - joinmarket-qt-git
+      - python-jmdaemon-git
+      - python-jmclient-git
+      - python-jmbitcoin-git
+      - python-jmbase-git
+      - python-chromalog
       - mwc-qt-wallet-bin
       - losslesscut
       - whirlpool-gui-appimage
