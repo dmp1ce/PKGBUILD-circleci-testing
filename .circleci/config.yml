@@ -35,8 +35,6 @@ jobs:
     <<: *defaults
   bisq-bin:
     <<: *defaults
-  bisq-git:
-    <<: *defaults
   lnd:
     <<: *defaults
   zap-desktop-appimage:
