@@ -27,7 +27,7 @@ jobs:
     <<: *defaults
   mwc-qt-wallet-bin:
     <<: *defaults
-  losslesscut:
+  losslesscut-bin:
     <<: *defaults
   whirlpool-gui-appimage:
     <<: *defaults
