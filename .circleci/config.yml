@@ -67,6 +67,8 @@ jobs:
     <<: *defaults
   bip39tool-git:
     <<: *defaults
+  python-bitcointx:
+    <<: *defaults
 
 workflows:
   version: 2
@@ -100,3 +102,4 @@ workflows:
       - list-all-systemd-timers-git
       - decompose-git
       - coinbin-git
+      - python-bitcointx
