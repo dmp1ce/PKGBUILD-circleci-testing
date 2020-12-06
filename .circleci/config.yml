@@ -89,7 +89,6 @@ workflows:
       - check_zfs-git
       - bisq
       - bisq-bin
-      - bisq-git
       - lnd
       - zap-desktop-appimage
       - zap-desktop-git
