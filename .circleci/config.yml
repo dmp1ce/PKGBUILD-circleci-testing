@@ -79,7 +79,7 @@ workflows:
       - python-jmbase-git
       - python-chromalog
       - mwc-qt-wallet-bin
-      - losslesscut
+      - losslesscut-bin
       - whirlpool-gui-appimage
       - bip39tool-git
       - bitaddress-git
