@@ -113,6 +113,5 @@ workflows:
               only:
                 - master
     <<: *joblist
-  build:
-    jobs:
-      <<: *joblist
+  commit:
+    <<: *joblist
