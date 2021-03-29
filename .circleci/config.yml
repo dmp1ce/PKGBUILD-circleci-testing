@@ -70,6 +70,38 @@ jobs:
   python-bitcointx:
     <<: *defaults
 
+
+joblist: &joblist
+  jobs:
+    - joinmarket-qt-git
+    - python-jmdaemon-git
+    - python-jmclient-git
+    - python-jmbitcoin-git
+    - python-jmbase-git
+    - python-chromalog
+    - mwc-qt-wallet-bin
+    - losslesscut-bin
+    - whirlpool-gui-appimage
+    - bip39tool-git
+    - bitaddress-git
+    - check_pacman-git
+    - check_zfs-git
+    - bisq
+    - bisq-bin
+    - lnd
+    - zap-desktop-appimage
+    - zap-desktop-git
+    - pybitmessage-git
+    - lando
+    - lando-git
+    - check_smartmon-git
+    - python2-simple-crypt
+    - mo-git
+    - list-all-systemd-timers-git
+    - decompose-git
+    - coinbin-git
+    - python-bitcointx
+
 workflows:
   version: 2
   weekly:
@@ -80,33 +112,7 @@ workflows:
             branches:
               only:
                 - master
+    <<: *joblist
   build:
     jobs:
-      - joinmarket-qt-git
-      - python-jmdaemon-git
-      - python-jmclient-git
-      - python-jmbitcoin-git
-      - python-jmbase-git
-      - python-chromalog
-      - mwc-qt-wallet-bin
-      - losslesscut-bin
-      - whirlpool-gui-appimage
-      - bip39tool-git
-      - bitaddress-git
-      - check_pacman-git
-      - check_zfs-git
-      - bisq
-      - bisq-bin
-      - lnd
-      - zap-desktop-appimage
-      - zap-desktop-git
-      - pybitmessage-git
-      - lando
-      - lando-git
-      - check_smartmon-git
-      - python2-simple-crypt
-      - mo-git
-      - list-all-systemd-timers-git
-      - decompose-git
-      - coinbin-git
-      - python-bitcointx
+      <<: *joblist
