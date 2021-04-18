@@ -1,7 +1,7 @@
 # Common sections
 defaults: &defaults
   docker:
-    - image: dmp1ce/archlinux-yay
+    - image: dmp1ce/archlinux-yay:no-glibc-patch
   steps:
     - run:
         name: Update packages
