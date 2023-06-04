@@ -104,14 +104,14 @@ joblist: &joblist
 
 workflows:
   version: 2
-  weekly:
-    triggers:
-      - schedule:
-          cron: "0 3 * * 6"
-          filters:
-            branches:
-              only:
-                - master
-    <<: *joblist
+  #weekly:
+  #  triggers:
+  #    - schedule:
+  #        cron: "0 3 * * 6"
+  #        filters:
+  #          branches:
+  #            only:
+  #              - master
+  #  <<: *joblist
   commit:
     <<: *joblist
